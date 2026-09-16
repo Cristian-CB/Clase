@@ -1,0 +1,48 @@
+body{font-family: Marcellus;
+    background-color: #f6f6f7;
+}
+
+
+.contenedor{
+    
+display: flex;
+margin: 15px;
+padding: 10px;
+gap: 20px;
+align-items: center;
+
+
+
+}
+
+
+
+
+.foto1 img{
+    border: 10px rgb(255, 255, 255) solid;
+
+}
+
+
+    .foto2 img{
+    width: 200px;
+    height: 400px;
+    
+}
+
+
+
+.columna{display: grid;
+    padding: 20px;
+  
+        grid-template-columns:1fr 1fr ;
+     background-color: rgb(133, 24, 24);
+}
+.texto{display: flex;
+flex-direction: column;
+justify-content: center;}
+
+
+.texto p {color:  #575555da; }
+
+
