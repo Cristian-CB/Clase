@@ -1,0 +1,29 @@
+body {
+    font: 1em sans-serif;
+    background-color: #d1d1d1;
+    padding: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+
+
+table th {
+  
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    
+}
+
+
+
+
+table td {
+    text-align: center;
+    padding: 10px;
+    
+}
