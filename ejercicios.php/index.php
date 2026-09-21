@@ -25,7 +25,7 @@ $estudiante = true;
 
 echo "Mi nombre es " . $nombre . " y tengo " . $edad . " años y estudiante = " . json_encode($estudiante);
 
-echo "<br>";
+echo "<br>"; 
 
 
 // ==================== EJERCICIO 2 ====================
@@ -90,7 +90,7 @@ for ($i=0; $i < 3; $i++) {
    <tr>
     <?php for ($j=0; $j< 3 ; $j++) {    ?> 
         
-    <td> <?php    echo $lista[$j][$i];   ?> </td>
+    <td> <?php echo $lista[$j][$i];   ?> </td>
      
      <?php }
     
@@ -99,10 +99,6 @@ for ($i=0; $i < 3; $i++) {
 
 
 <?php  }  ?>
-
-
-
-
 </table>
 
 
@@ -157,10 +153,6 @@ for ($i=0; $i < 3; $i++) {
  <tr>
     <?php  for ($i=0; $i <= 10; $i++){ 
         $resultado = $numero * $i ?>
-
-
-
-   
         <td> <?php  echo " " . $numero . " x " . $i  ?> </td>
         <td> <?php  echo $resultado ?>  </td>
         
