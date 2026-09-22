@@ -276,6 +276,339 @@ for ($i=0; $i < count($lista) ; $i++) {
 </table>
 
 
+<?php
+
+
+/*
+ * EJERCICIO 8 - TABLA DE ALUMNOS
+ *
+ * Crea un array con varios alumnos.
+ *
+ * Cada alumno tendrá:
+ * - Nombre
+ * - Edad
+ * - Nota
+ *
+ * Ejemplo:
+ *
+ * $alumnos = [
+ *     ["Cristian", 18, 9],
+ *     ["Carlos", 19, 6],
+ *     ["Marta", 18, 4],
+ *     ["Laura", 20, 8]
+ * ];
+ *
+ * Muestra los datos en una tabla HTML:
+ *
+ * | Nombre   | Edad | Nota |
+ *
+ * Utiliza dos for:
+ * - Uno para recorrer los alumnos.
+ * - Otro para recorrer los datos de cada alumno.
+ */
+
+
+
+
+
+
+ $alumnos = [
+    ["Cristian", 18, 9],
+    ["Carlos", 19, 6],
+    ["Marta", 18, 4],
+    ["Laura", 20, 8]
+  ];
+
+    ?>
+
+
+    <table border =1>
+        <tr>
+            
+        <th>nombre</th>
+        <th>edad</th>
+        <th>notas</th>
+    
+    
+    
+    </tr>
+    <tr>
+    <?php 
+   
+    for ($i=0; $i < count($alumnos); $i++) { 
+        for ($j=0; $j < count($alumnos[$i]); $j++) { ?>
+           
+        <td>
+        <?php echo $alumnos[$i][$j]; ?>
+        </td>
+
+
+
+
+        <?php } ?>
+
+
+
+
+    </tr> 
+    
+     <?php } ?>
+
+
+
+
+
+
+</table>
+
+
+
+
+<?php
+
+/*
+ * EJERCICIO 9 - PRODUCTOS
+ *
+ * Crea un array con 5 productos.
+ *
+ * Cada producto tendrá:
+ * - Nombre
+ * - Precio
+ *
+ * Ejemplo:
+ *
+ * $productos = [
+ *     ["Pan", 1.20],
+ *     ["Leche", 1.50],
+ *     ["Huevos", 2.30],
+ *     ["Arroz", 1.80],
+ *     ["Pollo", 5.50]
+ * ];
+ *
+ * Muestra los productos en una tabla.
+ *
+ * Añade una tercera columna llamada "Estado".
+ *
+ * Si el precio es mayor de 3 €:
+ * "Caro"
+ *
+ * Si el precio es 3 € o menos:
+ * "Barato"
+ *
+ * Utiliza dos for.
+
+
+ */
+
+
+
+
+
+   $productos = [
+      ["Pan", 4],
+     ["Leche", 1.50],
+      ["Huevos", 2.30],
+     ["Arroz", 1.80],
+      ["Pollo", 5.50]
+  ];
+?>
+        <table border = 1>
+
+        <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Estado</th>
+        </tr>
+        <tr>
+            <?php
+        for ($i=0; $i < count($productos ); $i++) { 
+            for ($j=0; $j < count($productos[$i]); $j++) { 
+                  ?>
+
+                <td> <?php echo $productos[$i][$j]; ?> </td>
+              
+
+
+          <?php  } 
+          
+          
+          if($productos[$i][1]> 3 ){?>
+
+          <td><?php echo "caro" ;?></td>
+          <?php }else { ?>
+            <td><?php  echo " barato ";?> </td>
+          <?php } 
+
+
+
+
+
+ ?>
+          </tr> <?php }
+           ?>
+
+            </tr>
+          
+        
+        
+        
+        
+        
+        
+        
+        </table>
+
+<?php 
+
+/*
+ * EJERCICIO 13 - MINI EXAMEN
+ *
+ * Crea un array de alumnos.
+ *
+ * Cada alumno tendrá:
+ * - Nombre
+ * - Edad
+ * - Nota
+ *
+ * Por ejemplo:
+ *
+ * $alumnos = [
+ *     ["Cristian", 18, 9],
+ *     ["Carlos", 19, 4],
+ *     ["Marta", 18, 7],
+ *     ["Laura", 20, 3],
+ *     ["Pablo", 19, 6]
+ * ];
+ *
+ * Muestra una tabla HTML con:
+ *
+ * | Nombre | Edad | Nota | Resultado |
+ *
+ * En Resultado:
+ *
+ * - Nota >= 5 -> Aprobado
+ * - Nota < 5 -> Suspenso
+ *
+ * Además, al final de la tabla muestra:
+ *
+ * "Número de aprobados: X"
+ * "Número de suspensos: X"
+ *
+ * Debes utilizar:
+ * - Array
+ * - For
+ * - If / else
+ * - Tabla HTML
+ *
+ * Intenta hacerlo sin mirar los ejercicios anteriores.
+ */
+
+
+
+
+
+
+
+
+  $alumnos = [
+      ["Cristian", 18, 9],
+      ["Carlos", 19, 4],
+      ["Marta", 18, 7],
+      ["Laura", 20, 3],
+      ["Pablo", 19, 6]
+  ];
+
+ $aprobados =0;
+ $suspensos =0;
+
+
+?>
+<table border = 1 >
+    <tr>
+<th>Nombre </th>
+<th>edad</th>
+<th>Nota </th>
+<th>Resultado </th>
+</tr>
+
+<tr>
+    <?php
+for ($i=0; $i < count($alumnos) ; $i++) { 
+    for($j=0; $j < count($alumnos[$i]) ; $j++) { ?>
+    
+        <td> <?php echo $alumnos[$i][$j] ;?> </td>
+
+
+
+
+
+
+
+<?php }   
+
+if ($alumnos[$i][2]>= 5 ) {
+    
+    $aprobados+=1;
+    ?>
+    <td> <?php  echo "aprobado "; ?> </td>
+    <?php }
+else{
+    $suspensos+=1;
+    ?>
+<td> <?php  echo "suspenso ";  ?> </td>
+<?php } ?>
+
+
+</tr> 
+
+<?php } ?>
+
+
+
+<tr> <th> numeros de aprobados</th>
+
+
+<td> <?php echo $aprobados; ?> </td>
+</tr>
+<tr> 
+    
+<th> numeros de suspensos</th>
+
+<td><?php echo $suspensos; ?> </td>
+
+
+</tr>
+
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
