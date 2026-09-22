@@ -28,12 +28,87 @@ $cart = array(
 
 
 
+$cart = array(["product_id " => 1 ,  "qty" => 2],["product_id " => 1 , "qty" => 2],[
+"product_id " => 1 ,"qty" => 2])
+    
+
+
+$items = [
+    ["id" => 1, "nombre" => "Cristian", "precio" => 10, "stock"=> 3 , "categoria" => "Servicio de asistencia"],
+    ["id" => 2, "nombre" => "Juan", "precio" => 25,"stock"=> 4 , "categoria" => "Servicio de limpieza"],
+    ["id" => 3, "nombre" => "Ana", "precio" => 15, "stock"=> 0 , "categoria" =>"Servicio de transporte"],
+    ["id" => 4, "nombre" => "Lucía", "precio" => 30, "stock"=> 2 , "categoria" =>"Servicio de reparación"],
+    ["id" => 5, "nombre" => "Carlos", "precio" => 20, "stock"=> 100 , "categoria" =>"Servicio de entrega"],
+ 
+];
+
+
+
+function mostrarProductos ($items,$carro){
+
+for ($i=0; $i < count($items) ; $i++) { 
+   
+        
+        echo $items[$i]["id"];
+        echo $items[$i]["nombre"];
+        echo $items[$i]["precio"];
+        echo $items[$i]["stock"];
+        echo $items[$i]["categoria"];}
+
+
+for ($i=0; $i < count($items) ; $i++) { 
+    if($items[$i]["stock"]==0){
+      echo $items[$i]["id"];
+        echo $items[$i]["nombre"];
+        echo $items[$i]["precio"];
+        echo $items[$i]["stock"];
+        echo $items[$i]["categoria"];
+
+        }}
+
+for ($i=0; $i < count($items) ; $i++) { 
+for ($j=0; $j< count($carro) ; $j++) { 
+if ($items[$i]["id"]== $carro[$j]["product_id"]) {
+    
+        echo $items[$i]["id"];
+
+        echo $items[$i]["nombre"];
+
+        echo $items[$i]["precio"];
+
+        echo $items[$i]["stock"];
+
+        echo $items[$i]["categoria"];
+}}}
+
+
+
+for ($i=0; $i < count($items) ; $i++) { 
+for ($j=0; $j< count($carro) ; $j++) { 
+if ($items[$i]["id"]== $carro[$j]["product_id"]) {
+        echo $items[$i]["nombre"];
+
+
+
+        echo $items[$i]["precio"];
+
+
+
+        echo $items[$i]["stock"];
+
+        $totalPago = $carro[$j]["qty"] * $items[$i]["precio"];
+        echo $totalPago;
+
+}}}
+
+
+}
 
 
 
 
 
-
+mostrarProductos($items, $cart)
 
 /*
  *
@@ -53,3 +128,48 @@ Cread una variable array, que tendrá username y un password.
 
  *
  * */
+
+$users = [
+    [
+        "username" => "cristian",
+        "password" => "1234",
+        "role" => "ADMIN",
+        "isActive" => json_encode(true)
+    ],
+    [
+        "username" => "juan",
+        "password" => "abcd",
+        "role" => "USER",
+        "isActive" => json_encode(true)
+    ],
+    [
+        "username" => "ana",
+        "password" => "5678",
+        "role" => "USER",
+        "isActive" => json_encode(false)
+    ],
+    [
+        "username" => "lucia",
+        "password" => "qwerty",
+        "role" => "ADMIN",
+        "isActive" => json_encode(true)
+    ],
+    [
+        "username" => "carlos",
+        "password" => "pass123",
+        "role" => "USER",
+        "isActive" => json_encode(true)
+    ]
+];
+
+
+$usuario = [
+    "username" => "cristian",
+    "password" => "1234"
+];
+
+
+$accesos = [
+    "Acceso total",
+    "Acceso limitado"
+];
