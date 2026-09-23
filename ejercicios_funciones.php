@@ -28,8 +28,8 @@ $cart = array(
 
 
 
-$cart = array(["product_id " => 1 ,  "qty" => 2],["product_id " => 1 , "qty" => 2],[
-"product_id " => 1 ,"qty" => 2])
+$cart = array(["product_id" => 1 ,  "qty" => 2],["product_id" => 2 , "qty" => 2],[
+"product_id" => 3 ,"qty" => 2]);
     
 
 
@@ -43,63 +43,58 @@ $items = [
 ];
 
 
-
 function mostrarProductos ($items,$carro){
+    $keys = array_keys($items);
 
-for ($i=0; $i < count($items) ; $i++) { 
    
+
+
+    echo " <b>Contenido de productos   </b><br>";
+
+    foreach ($items as $item) {
+
+        foreach ($item as $clave => $valor) {
+
+            echo $clave . ": " . $valor . "<br>";
+        }
+
+        echo "<br>";
+    }
+
+ 
+echo " <b> Productos sin stock  </b> <br>";
+foreach( $items as $item){
+
+    if($item["stock"]==0){
+        foreach($item as $clave => $valor)
         
-        echo $items[$i]["id"];
-        echo $items[$i]["nombre"];
-        echo $items[$i]["precio"];
-        echo $items[$i]["stock"];
-        echo $items[$i]["categoria"];}
-
-
-for ($i=0; $i < count($items) ; $i++) { 
-    if($items[$i]["stock"]==0){
-      echo $items[$i]["id"];
-        echo $items[$i]["nombre"];
-        echo $items[$i]["precio"];
-        echo $items[$i]["stock"];
-        echo $items[$i]["categoria"];
-
+        echo $clave . ": " . $valor . "<br>";
+        echo "<br>";
         }}
 
-for ($i=0; $i < count($items) ; $i++) { 
-for ($j=0; $j< count($carro) ; $j++) { 
-if ($items[$i]["id"]== $carro[$j]["product_id"]) {
-    
-        echo $items[$i]["id"];
-
-        echo $items[$i]["nombre"];
-
-        echo $items[$i]["precio"];
-
-        echo $items[$i]["stock"];
-
-        echo $items[$i]["categoria"];
-}}}
 
 
+echo "<b> Productos que esten en el carrito </b>   <br> ";
+foreach( $items as $item){
+    foreach($carro as $producto){
+if ($item["id"]== $producto["product_id"]) {
+    foreach($item as $clave => $valor){
+        echo $clave . ": " . $valor . "<br>";
+        
+}}}}
 
-for ($i=0; $i < count($items) ; $i++) { 
-for ($j=0; $j< count($carro) ; $j++) { 
-if ($items[$i]["id"]== $carro[$j]["product_id"]) {
-        echo $items[$i]["nombre"];
+$totalPrecio = 0;
+echo " <b>nombre y el precio total a pagar (Carrito)  </b> <br>";
+foreach($items as $item ){
+    foreach ($carro as $car){
+if ($item["id"]== $car["product_id"]) {
+       foreach($item as $clave =>$valor){
+        echo $clave . " : " . $valor. "<br>";
+        $totalPrecio +=$car["qty"] * $item["precio"];
+       
 
-
-
-        echo $items[$i]["precio"];
-
-
-
-        echo $items[$i]["stock"];
-
-        $totalPago = $carro[$j]["qty"] * $items[$i]["precio"];
-        echo $totalPago;
-
-}}}
+}}}}
+echo $totalPrecio;
 
 
 }
@@ -108,7 +103,7 @@ if ($items[$i]["id"]== $carro[$j]["product_id"]) {
 
 
 
-mostrarProductos($items, $cart)
+mostrarProductos($items, $cart);
 
 /*
  *
@@ -173,3 +168,22 @@ $accesos = [
     "Acceso total",
     "Acceso limitado"
 ];
+
+
+foreach($users as $numero){
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
