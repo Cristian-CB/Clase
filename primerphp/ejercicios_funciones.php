@@ -170,12 +170,35 @@ $accesos = [
 ];
 
 
+
+echo "<br>";
+$password = FALSE;
 foreach($users as $numero){
+    if($numero["username"] === $usuario["username"]){
+
+        echo "usuario encontrado <br>" ;
+        $password =TRUE;
+        if ($numero["password"] !== $usuario["password"]) {
+            echo "incorrect password <br> "; 
+
+            
+        }
+        else{
+            echo "password is correct <br>";
+            echo "Bienvenido " .$usuario["username"]. " con el rol de: " . $numero["role"];
+        }
+
+    
+    }
+    
+
 
 
 
 }
-
+if (!$password) {
+    echo "usuario no encontrado <br> "; 
+}
 
 
 
