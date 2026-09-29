@@ -1,0 +1,56 @@
+main { padding: 100px 50px;}
+
+
+section {border:1px solid black;
+border-radius: 15px;
+padding: 50px 40px ;}
+
+
+section.juegos {display: grid;
+
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-gap: 25px;
+}
+
+
+section.juegos > .item {
+
+border: 1px dashed black;
+border-radius: 15px;
+padding: 25px 15px  ;
+text-align: center; 
+
+}
+
+
+section.juegos > .item > .titulo {
+    color: rgba(183, 0, 207, 0.822);
+    
+
+    
+}
+section.juegos > .item > .titulo:hover {
+    color: rgb(99, 7, 141);
+    
+
+    
+}
+section.juegos > .item > .description {
+    color: rgb(126, 125, 126);
+    
+    
+    
+}
+section.juegos > .item > .categoria {   
+    color: rgb(116, 0, 116);
+    
+    
+
+
+}
+
+section.juegos > .item > .categoria:hover{
+    color: rgb(112, 9, 196);
+
+
+}
