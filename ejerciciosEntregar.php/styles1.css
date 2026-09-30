@@ -1,0 +1,89 @@
+
+
+
+body {
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: gray;
+    width: 95%;
+
+    margin: 20px;
+    margin-left: 50px;
+}
+
+
+
+h2 , p{margin: 7px;
+padding: 0  20px ;
+margin-bottom: 0px;}
+
+.todas{color: whitesmoke;
+font-family: 'Times New Roman', Times, serif;}    
+
+
+
+
+
+
+section.pelicula{
+    border:1px solid gray;
+    border-radius: 15px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    row-gap: 30px;
+    background-color: gray;
+    
+}
+
+section.pelicula >.item {
+background-color: rgb(85, 22, 22);
+border:1px solid bisque ;
+width: 75%;
+height: 420px;
+display: flex;
+flex-direction: column;
+text-align: center;
+border-radius: 20px;
+align-items: center;
+padding: 15px;
+
+
+}
+
+
+
+section img {
+width: 95%;
+object-fit: cover;
+align-items: center;
+padding: 0px;
+margin: 0px;
+
+}
+
+p.disponible{color: yellow;
+
+   margin-top: auto;
+
+}
+p.vista{margin-top: auto;
+    color:yellowgreen
+
+
+}
+p.noVista{margin-top: auto;
+    color: rgb(78, 47, 255);
+
+
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+form label {
+    margin-top: 10px;
+}
