@@ -42,30 +42,31 @@ function mostrar($peliculas){
                         <h2 class="titulo"> 
                             <?= $pelicula["titulo"] ?> 
                         </h2>
-                        <p class = "universo"> 
-                            <?= $pelicula ["universo"] ?> 
-                        </p>
-                        <p class ="year">  
-                            <?= $pelicula["anyo"] ?>
-                         </p>
-                        <p class ="puntuacion" > <?= $pelicula["puntuacion"] ?> ★ </p>
+                        <div class="content">
+                            <p class="universo"> 
+                                <?= $pelicula ["universo"] ?> 
+                            </p>
+                            <p class ="year">  
+                                <?= $pelicula["anyo"] ?>
+                            </p>
+                            <p class ="puntuacion" > <?= $pelicula["puntuacion"] ?> ★ </p>
 
 
-                        <?php 
-                        if (!$pelicula["disponible"]) { ?>
-                        <p class = "disponible" >
-                            Pelicula no disponible
-                        </p>
+                            <?php 
+                            if (!$pelicula["disponible"]) { ?>
+                            <p class = "disponible" >
+                                Pelicula no disponible
+                            </p>
+                            <?php    
+                            }
+                            ?>
                         
+                        </div>
 
                         
-                         <?php    
-                        }
-                         ?>
+                         
                         
-                      
-
-                        
+                
                     </div>
 
                     <?php } }
@@ -112,7 +113,7 @@ function mostrarWh($peliculas,$lista){
                                 
                             <?php   } else { ?>
                                 <p class ="noVista" > pelicula no vista</p>
-                           <?php  }
+                           <?php  }  
 
 
 
@@ -148,7 +149,7 @@ function mostrarWh($peliculas,$lista){
 
               
                 <?php 
-                $filtro ="Marvel"; 
+                $filtro ="DC"; 
                 $peliculasUniverso = [];
                 foreach($peliculas as $pelis){
                 if($pelis["universo"] == $filtro){
