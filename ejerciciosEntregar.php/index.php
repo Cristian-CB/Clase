@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Primer Ejercicio PHP Web</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <?php
@@ -65,7 +65,7 @@ function mostrar($peliculas){
                             </div>
 
                                 <div> 
-                                    <p class ="textoDebajo">asfasdfasfasf</p> 
+                                    <p class ="textoDebajo"> <?= $pelicula["titulo"] ?>  </p> 
                                 
                                 </div>
                     </div>
@@ -137,7 +137,7 @@ function mostrarWh($peliculas, $lista){
                     </div>
 
                     <div>
-                        <p class="textoDebajo">asfasdfasfasf</p>
+                        <p class="textoDebajo"> <?= $pelicula["titulo"] ?> </p>
                     </div>
 
                 </div>
@@ -248,8 +248,8 @@ function mostrarWh($peliculas, $lista){
 
 
  
- <h2 class= "formulario">Formulario</h2>
-<form>
+ <form>
+    <h2 class= "formulario">Formulario</h2>
     <label for="titulo">Título</label>
     <input type="text" id="titulo">
 
