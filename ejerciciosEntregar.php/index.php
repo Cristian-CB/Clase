@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Primer Ejercicio PHP Web</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <?php
@@ -33,110 +33,132 @@ $watchlist = [
 function mostrar($peliculas){
     
                          foreach($peliculas as $pelicula) { ?>
-                    
-                    <div class = "item">
-                        <img class= "imagen"
-                         src="<?= $pelicula["imagen"] ?>" 
-                         alt="imagen">
+                    <div class = "itemPelicula <?php if (!$pelicula['disponible']) echo 'noDisponible'; ?> " >
+                        <div class = "item">
+                            <img class= "imagen"
+                            src="<?= $pelicula["imagen"] ?>" 
+                            alt="imagen">
 
-                        <h2 class="titulo"> 
-                            <?= $pelicula["titulo"] ?> 
-                        </h2>
-                        <div class="content">
-                            <p class="universo"> 
+                            <h2 class="titulo"> 
+                                <?= $pelicula["titulo"] ?> 
+                            </h2>
+                            <div class="content">
+                                <p class="universo"> 
                                 <?= $pelicula ["universo"] ?> 
-                            </p>
-                            <p class ="year">  
+                                </p>
+                                <p class ="year">  
                                 <?= $pelicula["anyo"] ?>
-                            </p>
-                            <p class ="puntuacion" > <?= $pelicula["puntuacion"] ?> ★ </p>
+                                </p>
+                                <p class ="puntuacion" > <?= $pelicula["puntuacion"] ?> ★ </p>
+                            
+                            </div>
+                                <?php 
+                                if (!$pelicula["disponible"]) { ?>
+                                <p class = "disponible" >
+                                    No disponible
+                                </p>
 
+                            
+                                <?php    
+                                }
+                                ?>
+                            </div>
 
-                            <?php 
-                            if (!$pelicula["disponible"]) { ?>
-                            <p class = "disponible" >
-                                Pelicula no disponible
-                            </p>
-                            <?php    
-                            }
-                            ?>
-                        
-                        </div>
-
-                        
-                         
-                        
-                
+                                <div> 
+                                    <p class ="textoDebajo">asfasdfasfasf</p> 
+                                
+                                </div>
                     </div>
+                    
 
                     <?php } }
 
 
 
 
-function mostrarWh($peliculas,$lista){
+function mostrarWh($peliculas, $lista){
     
-                         foreach($peliculas as $pelicula) { 
-                            foreach($lista as $peli){
-                    if ($pelicula["id"] == $peli["pelicula_id"]) {
-                        
-                    
-                    
-                    ?>
-                    <div class = "item">
-                        <img class= "imagen"
-                         src="<?= $pelicula["imagen"] ?>" 
-                         alt="imagen">
+    foreach($peliculas as $pelicula) { 
+        foreach($lista as $peli){
+
+            if ($pelicula["id"] == $peli["pelicula_id"]) {
+?>
+                <div class="itemPelicula">
+
+                    <div class="item">
+
+                        <img class="imagen"
+                             src="<?= $pelicula["imagen"] ?>" 
+                             alt="imagen">
 
                         <h2 class="titulo"> 
                             <?= $pelicula["titulo"] ?> 
                         </h2>
-                        <p class = "universo"> 
-                            <?= $pelicula ["universo"] ?> 
-                        </p>
-                        <p class ="year">  
-                            <?= $pelicula["anyo"] ?>
-                         </p>
-                        <p class ="puntuacion" > <?= $pelicula["puntuacion"] ?> ★ </p>
+
+                        <div class="content">
+
+                            <p class="universo"> 
+                                <?= $pelicula["universo"] ?> 
+                            </p>
+
+                            <p class="year">  
+                                <?= $pelicula["anyo"] ?>
+                            </p>
+
+                            <p class="puntuacion">
+                                <?= $pelicula["puntuacion"] ?> ★
+                            </p>
+
+                            </div>
+                            <?php 
+                            if (!$pelicula["disponible"]) { ?>
+                                <p class="disponible">
+                                    Pelicula no disponible
+                                </p>
+                            <?php 
+                            } 
+                            ?>
+
+                            <?php 
+                            if ($peli["vista"]) { ?>
+                                <p class="vista">
+                                     Vista
+                                </p>
+                            <?php 
+                            } else { ?>
+                                <p class="noVista">
+                                    No vista
+                                </p>
+                            <?php 
+                            } 
+                            ?>
 
 
-                        <?php 
-                        if (!$pelicula["disponible"]) { ?>
-                        <p class = "disponible" >
-                            Pelicula no disponible
-                        </p>
-                         <?php  }  
-                                
-                            if ($peli["vista"]) { 
-                                ?>
-                                <p class ="vista">Pelicula vista </p>
-                                
-                            <?php   } else { ?>
-                                <p class ="noVista" > pelicula no vista</p>
-                           <?php  }  
-
-
-
-                        
-                         ?>
-                        
-                      
-
-                        
                     </div>
 
-                    <?php } }}}
+                    <div>
+                        <p class="textoDebajo">asfasdfasfasf</p>
+                    </div>
+
+                </div>
+
+<?php
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 ?>
-
-
-
-
-
-
-
-
-
 <body>
         <main>
             
@@ -145,7 +167,7 @@ function mostrarWh($peliculas,$lista){
                 <section class = "pelicula">
                   
                <?php  mostrar($peliculas) ?>
-                </section>
+                </section class = "filtro">
 
               
                 <?php 
@@ -154,7 +176,7 @@ function mostrarWh($peliculas,$lista){
                 foreach($peliculas as $pelis){
                 if($pelis["universo"] == $filtro){
                 $peliculasUniverso[] = $pelis;}} ?>
-
+                </section>
 
                 <h2 class = "todas" >Peliculas de <?= $filtro ?></h2>
                 <section class = "pelicula">
@@ -188,23 +210,23 @@ function mostrarWh($peliculas,$lista){
                     
                     
                     
-                    <h2 class = "todas"> whislist </h2>
-                <section class = "pelicula" >
+                    <h2 class = "todas"> whachlist </h2>
+                 <section class = "pelicula" >
 
-                <?php 
+                 <?php 
                 
 
 
                   
                 
-                mostrarWh($peliculas,$watchlist); 
+                 mostrarWh($peliculas,$watchlist); 
                
-                ?>
+                 ?>
                 
 
 
               
-];
+
 
 
 
@@ -222,8 +244,12 @@ function mostrarWh($peliculas,$lista){
  <br>
  
 
-<form>
 
+
+
+ 
+ <h2 class= "formulario">Formulario</h2>
+<form>
     <label for="titulo">Título</label>
     <input type="text" id="titulo">
 
@@ -251,7 +277,7 @@ function mostrarWh($peliculas,$lista){
     <label for="disponible">Disponible</label>
     <input type="checkbox" id="disponible">
 
-    <label for="enviar">Enviar</label>
+ 
     <input type="submit" id="enviar">
 
 </form>

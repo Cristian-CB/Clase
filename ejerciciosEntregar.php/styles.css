@@ -1,0 +1,303 @@
+
+
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: linear-gradient(to left,#10223b,#142c4d);
+   
+    width: 95%;
+
+    margin: 20px;
+    margin-left: 50px;
+}
+
+
+
+h2 , p{
+    margin: 7px;
+padding: 0  20px ;
+margin-bottom: 0px;
+}
+
+.todas{color: whitesmoke;
+font-family: 'Times New Roman', Times, serif;}    
+
+
+
+
+.filtro{align-items: center;}
+section.pelicula{
+   align-items: center;
+    border-radius: 15px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    
+   
+   
+    
+}
+
+.item {
+background-color: rgb(85, 22, 22);
+
+width: 90%;
+height: 400px;
+display: flex;
+flex-direction: column;
+text-align: center;
+border-radius: 20px;
+align-items: center;
+
+
+
+}
+section.pelicula >.itemPeliculas {
+text-align: left;
+padding: 0;
+margin: 0;
+
+
+
+
+
+}
+
+
+
+section img {
+    position: relative;
+    width: 100%;
+    height: 400px;
+
+
+    object-fit: cover;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    box-shadow: 1px 5px  10px black;
+
+
+}
+
+
+.item  h2 { 
+    display: none;
+}
+.item  .content { 
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+
+    position: absolute;
+    bottom: 0px;
+    width: 100px;
+    left: 50px;
+   
+    margin: 2px;
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+}
+    
+.item .content p{
+    
+   
+    color: #1A1919;
+    margin: 3px;
+    display: inline-block;
+    background-color: #EDB608;
+    border: 0 solid black;
+    border-radius: 20px;
+    padding: 3px;
+    white-space: nowrap;
+      
+    
+}
+
+
+.itemPeliculas{text-align: center;}
+.textoDebajo {
+    color: white;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+p.disponible{color: yellow;
+
+   
+
+}
+p.vista{margin-top: auto;
+    color:yellowgreen;
+
+  font-weight: bold;
+}
+p.noVista{margin-top: auto;
+    color: rgb(78, 47, 255);
+  font-weight: bold;
+
+}
+
+
+
+form label {
+    margin-top: 10px;
+}
+
+img{border-radius: 20px;
+    position: relative;
+    width: 400px;
+
+
+
+
+}
+
+.disponible {
+    color: white !important;
+    border-radius: 0px 20px 0px 10px;
+    position: absolute;
+    top: 0px;
+    width: fit-content;
+   
+    display: inline-block;
+    background-color: red;
+    padding: 3px;
+    margin: 0px;
+    right: 0px;
+     font-weight: bold;
+}
+
+.noDisponible .imagen{ filter: grayscale(95%);}
+
+
+
+
+
+
+@keyframes moveUp {
+
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+
+.item { position: relative; }
+
+.item * {
+    color: #FFF ;
+}
+
+.item:hover .titulo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .75);
+    opacity: 1;
+    animation: moveUp .25s ease-in forwards;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item:hover .content {
+    position: absolute;
+    bottom: 30px;
+}
+
+.vista {
+    color: black !important;
+    padding: 8px;
+    position: absolute;
+    background-color: #16A34A;
+    border-radius: 15px 0px 20px 0px;
+   
+    top: 0px;
+    left: 0px;
+  
+    margin: 0;
+}
+
+.noVista {
+    color: white !important;
+    padding: 8px ;
+    position: absolute;
+    background-color: #7F1D1D;
+    border-radius: 15px 0px 20px 0px;
+    top: 0px;
+    left: 0px;
+ margin: 0;
+   
+}
+
+
+
+.formulario{color: white;}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 400px;
+background-color: rgba(87, 80, 80, 0.932);
+box-shadow: 10px 10px 20px black;
+border-radius: 20px;
+margin: 6px;
+padding: 15px;}
+
+form label {
+padding: 10px;
+margin: 5px;
+font: bold;
+
+}
+
+form input, select {border: none;
+border-radius: 7px;
+font-size: 15px;
+padding: 6px;
+width: 250px;}
+#imagen{width:140px;}
+
+form input:focus,
+form select :focus
+{outline: 2px solid #16A34A;}
+
+#enviar {margin-top: 20px;}
+#enviar:hover{
+    background-color: gray;
+}
+#disponible { 
+    outline: none;
+    width: 20px;
+    height: 20px;
+   margin: 0;
+}
