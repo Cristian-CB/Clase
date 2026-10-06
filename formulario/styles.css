@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    /*
+    1 valor => arriba abajo izquierda derecha
+    2 valor => arriba/abajo izquierda/derecha
+    3 valor => arriba izquierda/derecha abajo
+    4 valor => arriba derecha abajo izquierda
+    */
+    padding: 60px 50px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+section {
+    
+    border-radius: 15px;
+    padding: 50px 40px;
+}
+
+section.juegos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*1fr 1fr 1fr 1fr*/
+    grid-gap: 25px;
+}
+
+section.juegos > .item {
+    border: 1px dashed #667fea;
+    border-radius: 15px;
+    padding: 25px 15px;
+    position: relative;
+}
+
+section.juegos > .item img {
+    width: 90%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+}
+
+section.juegos > .item .category {
+    width: fit-content;
+    padding: 5px 15px;
+    background-color: coral;
+    color: white;
+    border-radius: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+section.juegos > .item .title {
+    font-size: x-large;
+    font-weight: 600;
+    margin: 20px 0 5px;
+}
+
+section.juegos > .item .description {
+    font-size: medium;
+    font-weight: 500;
+    margin: 10px 0 0;
+    line-height: 1.4;
+}
+
+section.juegos .no_games {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+section.juegos .no_games p {
+    font-size: xx-large;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+
+
+.cuadrado{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    
+    
+
+}
+
+.item{border: 1px solid black ;
+    width: 80%;
+    height: 170px ;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.item .titulo {padding-top: 20px;}
+
+.item .titulo ,.info {
+
+padding-left: 15px;
+padding-bottom: 4px;
+margin: 0;
+
+}
+
+.item .info {margin: 0 !important;
+
+padding-top: 0px !important;
+}
+.item .numero {padding-left: 15px;
+width: 130%;}
+
+.item:nth-child(1){background-color: #FFFFFF;}
+.item:nth-child(1) .titulo , .item:nth-child(1) .info {color: #595C5F;}
+
+
+
+.item:nth-child(2){background-color: #4F46E5;
+color: #FFFFFF;}
+
+
+
+
+
+.item:nth-child(3){background-color: #FFFFFF;}
+.item:nth-child(3) .titulo , .item:nth-child(3) .info {color: #595C5F;}
+
+.item:nth-child(4){background-color: #22C55E;
+    color: #FFFFFF;}
+
+
+    
+.item:nth-child(5){background-color: #FFFFFF;}
+.item:nth-child(5) .titulo , .item:nth-child(5) .info {color: #595C5F;}
+
+
+.cajaproductos{
+    
+    border: 1px solid black;
+    
+}
+
+.ropa {
+    display: flex;
+    flex-flow: row nowrap;
+
+    gap: 20px;
+   
+    overflow-x: auto;
+
+  margin: 40px 0;
+    padding: 0;
+      
+}
+
+.itemRopa {
+    min-width: 350px;
+    margin: 0px;
+    align-items: center;
+    text-align: start !important;
+    gap: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+
+}
+.itemRopa img {
+    width: 70%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+.itemRopa div {
+    padding: 5px 10px;
+}
+
+.itemRopa div:first-of-type {
+    margin-top: 15px ;
+}
+
+h4{ margin: 0px;}
+
+
+.itemRopa .pequeña{padding-bottom:20px ;
+}
+.publicado{background-color: #22C55E;
+color: white;
+border-radius: 20px;
+width: fit-content;
+padding: 5px;
+}
+.inputss{
+    display: grid;
+    grid-template-columns: 1fr  auto;
+    grid-gap: 60%;
+}
+
+button{color:white;
+background-color: #4F46E5;
+border-radius:5px;
+width: 120px;
+outline: none;
+padding: 10px;
+border: none;}
+
+.inputs select {
+    
+    border-radius: 10px;
+    background-color: rgb(252, 250, 250);    
+    border: 1px solid #DEE2E6;
+   
+
+
+
+}
+.inputs{
+    display: flex;
+    flex-direction: row;
+    gap:2rem;
+}
