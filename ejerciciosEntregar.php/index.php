@@ -20,6 +20,31 @@ include_once ("./mostrarWachList.php");
 
 
 <body>
+    
+    <section class = "fotoPrincipal">
+        <img src= "imgs/spiderman.webp" alt="">
+           
+        <p class="primerP"> Ver pelicula </p>
+        <h3 class  = "segundoP" >A medida qué Spider-Man está en la cima de su carrera protegiendo la ciudad de Nueva York, 
+            una serie de crímenes inusuales lo arrastran a una red de misterios más grande de lo que jamás haya enfrentado.</h3>
+
+
+        
+        
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
         <main>
             
                 
@@ -104,44 +129,10 @@ include_once ("./mostrarWachList.php");
  <br>
  
 
+<?php
 
-
-
- 
- <form>
-    <h2 class= "formulario">Formulario</h2>
-    <label for="titulo">Título</label>
-    <input type="text" id="titulo">
-
-    <label for="universo">Universo</label>
-    <select id="universo">
-        <option>Marvel</option>
-        <option>DC</option>
-    </select>
-
-    <label for="director">Director</label>
-    <input type="text" id="director">
-
-    <label for="anyo">Año</label>
-    <input type="number" id="anyo">
-
-    <label for="duracion">Duración (mins)</label>
-    <input type="number" id="duracion">
-
-    <label for="puntuacion">Puntuación (0-10)</label>
-    <input type="number" id="puntuacion">
-
-    <label for="imagen">Imagen</label>
-    <input type="file" id="imagen">
-
-    <label for="disponible">Disponible</label>
-    <input type="checkbox" id="disponible">
-
- 
-    <input type="submit" id="enviar">
-
-</form>
-
+include_once("formulario.php")
+?>
 
  </body>
 
