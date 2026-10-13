@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (isset($_SESSION["usuario_logged"])) {
+    header("location: ./dashboard.php");
+    exit();
+}
+
+?>
+
 <!doctype html>
 <html lang="es">
 <head>
