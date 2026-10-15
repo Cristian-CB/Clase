@@ -87,12 +87,13 @@ $anime = [
 ];
 
 ?>
-<section class = "hola">
-    <h2>Animes añadidos</h2>
+    <h2 class ="tituloAddAnime">Animes añadidos:</h2>
+<section class = "animesAdd">
+    <div>
 <?php
-
 mostrar([$anime]);
 ?>
+</div>
 </section>
 
 <?php

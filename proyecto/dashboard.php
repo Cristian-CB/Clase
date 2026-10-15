@@ -3,6 +3,14 @@
 require_once("./config.php");
 require_once("./data.php");
 require_once("./controllers/tarjeta.php");
+
+
+
+if (!isset($_SESSION["usuario_logged"])) {
+    header("Location: ./login.php");
+    exit();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -22,15 +30,16 @@ require_once("./controllers/tarjeta.php");
     <main>
         <section class = "texto">
             <div>
-        <h1>Bienvenido, <?= $_SESSION["usuario_logged"] ?> :</h1>
-
-        <h2>Tu rol es: <?= $_SESSION["role"] ?></h2>
-        </div>
+                <h2>Bienvenido, <?= $_SESSION["usuario_logged"] ?> :</h2  >
+                </div>
+            <div>
+                <p>Tu rol es: <?= $_SESSION["role"] ?></p>
+            </div>
 
         <p>Total de elementos del catálogo: <?= count($animes) ?></p>
         </section>
 
-        <section class="hola">
+        <section class="animesAdd">
         <?php mostrar($animes); ?>
         </section>
          </main>

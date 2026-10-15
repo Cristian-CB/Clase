@@ -71,9 +71,9 @@ $animes = [
 ];
 
 
-$arr=[["usuario"=> "cristian", "passwd"=> "1234" , "role"=>"admin"],
-["usuario"=> "benito", "passwd"=> "1234" , "role"=>"user"],
-["usuario"=> "benito", "passwd"=> "1234" , "role"=>"user"]];
+$arr=[["usuario"=> "chanel", "passwd"=> "1234" , "role"=>"admin"],
+    ["usuario"=> "benito", "passwd"=> "1234" , "role"=>"user"],
+    ["usuario"=> "spike", "passwd"=> "1234" , "role"=>"user"]];
 
 
 ?>

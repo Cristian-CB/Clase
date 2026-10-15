@@ -44,17 +44,17 @@ if($usuarioCorrecto){
 
     if($contraseñaCorrecta){
 
-        $_SESSION["usuario_logged"]= $user;
+       $_SESSION["usuario_logged"] = $user;
         $_SESSION["role"]=$role;
         header("Location: ../dashboard.php");
         exit();
 
     }else{
-        header("Location:../index.php?error=contraseña-incorrecta");
+        header("Location:../login.php?error=contraseña-incorrecta");
         exit();
         }
 }else{
-        header("Location: ../index.php?error=usuario-incorrrecto");
+        header("Location: ../login.php?error=usuario-incorrrecto");
         exit();
         }
 }

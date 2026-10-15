@@ -3,7 +3,7 @@
 
 require_once("./config.php");
 
-session_destroy();
+
 if(isset($_SESSION["usuario_logged"])){
     header("Location: ./dashboard.php");
     exit();
@@ -25,16 +25,31 @@ if(isset($_SESSION["usuario_logged"])){
     </head>
 <body class = "inicio">
 
-<form action="./controllers/middleware.php" method="post" class="inicioSesion" >
+<form action="./controllers/middleware.php" method="post" class="inicioSesion">
 
     <img src="./imgs/image.png" alt="" class="logo1">
-    <H2>Iniciar sesion en Anime-CB</H2>
-    <input type="text" name ="usuario" placeholder="Usuario">
-   
-    <input type="text" name ="contraseña" placeholder="Contraseña">
-    <input type="submit" value="Iniciar sesion" id="botoncito">
-    
-    <button type="submit" name="invitado">Iniciar sesión más tarde</button>
+    <h2>Iniciar sesión en Anime-CB</h2>
+
+    <input type="text" name="usuario" placeholder="Usuario" class="<?= isset($_GET['error']) ? 'input-error' : '' ?>">
+
+    <input type="password" name="contraseña" placeholder="Contraseña" class="<?= isset($_GET['error']) ? 'input-error' : '' ?>">
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["error"])) {
+        if ($_GET["error"] === "usuario-incorrrecto") {
+            echo "<p class='error'>Usuario no encontrado</p>";
+        } else if ($_GET["error"] === "contraseña-incorrecta") {
+            echo "<p class='error'>Contraseña incorrecta</p>";
+        } else {
+            echo "<p class='error'>Acceso no permitido</p>";
+        }
+    }
+    ?>
+
+    <input type="submit" value="Iniciar sesión" id="botoncito">
+
+    <a href="./index.php">Iniciar sesion mas tarde </a>
+
 </form>
 
 

@@ -67,14 +67,14 @@ if (isset($_GET["genero"]) && !$_GET["genero"]=="") {
         }
     }
     ?>
-    <section class ="hola">
+    <section class ="animesAdd">
         <?php
     mostrar($arrayGeneros);
     ?>
     </section>
     <?php
 } else { ?>
-    <section class = "hola">
+    <section class = "animesAdd">
         <?php
     mostrar($animes);
     ?>

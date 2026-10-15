@@ -21,6 +21,9 @@
         <a class ="boton" href="./controllers/logout.php">Cerrar sesión</a>
         </div>
 
+            <p class ="boton1" >(づ๑•ᴗ•๑)づ <?=  $_SESSION["usuario_logged"] ?></p>
+            </div>  
+
     <?php } else { ?>
 
         <a class ="boton" href="./login.php">Iniciar sesión</a>

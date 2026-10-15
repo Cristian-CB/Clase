@@ -31,7 +31,7 @@ if($a["destacado"]===true){
 } ?>
 
 
-<section class ="hola">
+<section class ="animesAdd">
 
 <?php
 mostrar($destacados);
