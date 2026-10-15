@@ -1,18 +1,13 @@
+
 <?php
+require("./config.php");
+require("./data.php");
+require("./controllers/tarjeta.php");
 
-
-require_once("./config.php");
-
-session_destroy();
-if(isset($_SESSION["usuario_logged"])){
-    header("Location: ./dashboard.php");
-    exit();
-}
-
-
-
-
+include("./partials/header.php");
+include("./partials/nav.php");
 ?>
+
 
 
 <!DOCTYPE html>
@@ -21,27 +16,31 @@ if(isset($_SESSION["usuario_logged"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    link</head>
+    <link rel="stylesheet" href="./style.css">
+</head>
 <body>
+    <h2 class = "tituloIndex"> Animes destacados</h2>
+    <main class = "mainIndex">
+<?php
+$destacados = [];
+foreach($animes as $a){
+if($a["destacado"]===true){
+    $destacados[]=$a;
+}
 
-<form action="./controllers/middleware.php" method="post" >
-
-
-    <label for="usuario">Usuario</label>
-    <input type="text" name ="usuario">
-    <label for="contraseña">Contraseña</label>
-    <input type="text" name ="contraseña">
-    <input type="submit" value="Iniciar sesion">
-    <button type="button">iniciar sesion mas tarde</button>
-</form>
-
+} ?>
 
 
+<section class ="hola">
 
+<?php
+mostrar($destacados);
+?>
+</section>
+</main>
+<?php
+include("./partials/footer.php");
+?>
 
-
-
-
-    
 </body>
 </html>

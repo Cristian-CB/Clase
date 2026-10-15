@@ -8,6 +8,17 @@ require("../data.php");
 
 
 
+if (isset($_POST["invitado"])) {
+
+    header("Location: ../index.php");
+    exit();
+}
+
+
+
+
+
+
 if($_SERVER["REQUEST_METHOD"]==="POST"){
 
 
@@ -24,6 +35,7 @@ foreach($arr as $e) {
     $usuarioCorrecto=true;
     if($e["passwd"]===$contraseña){
         $contraseñaCorrecta=true;
+        $role = $e["role"];
 
     }
 }
@@ -33,6 +45,7 @@ if($usuarioCorrecto){
     if($contraseñaCorrecta){
 
         $_SESSION["usuario_logged"]= $user;
+        $_SESSION["role"]=$role;
         header("Location: ../dashboard.php");
         exit();
 
