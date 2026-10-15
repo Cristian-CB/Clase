@@ -20,15 +20,14 @@ color:#ececec;
 }
 
 
-.imagen {
-    display: block;
-    margin: 0 auto;
-}
+
 
 .imagen {
     display: block;
-    width: 200px;
-    height: 250px;
+    margin: 0 auto;
+
+    width: 100%;
+    height: auto;
     object-fit: cover;
     object-position: center;
     margin: 0 auto;
@@ -125,11 +124,9 @@ grid-template-columns: repeat(4,1fr);
 
 
 
-.itemAnime{width: 400px;
+.itemAnime{width: 280px;
 }
 .item {
-    
-background-color: #ececec;
 
 width:100%;
 height: 400px;
@@ -153,17 +150,17 @@ margin: 0;
 
 
  .hola img {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
     
     
 
-    object-fit: cover;
-    align-items: center;
-    padding: 0px;
-    margin: 0px;
-    box-shadow: 1px 5px  10px black;
+  object-fit: contain;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  box-shadow: 1px 5px  10px black;
     
 
 }
@@ -177,12 +174,12 @@ margin: 0;
 .item .content { 
     display: flex;
     flex-direction: row;
-    gap: 0px;
+    
 
     position: absolute;
     bottom: 10px;
-    width: 100px;
-    left: 125px;
+    width: 50px;
+    left: 110px;
    
     margin: 2px;
     padding: 5px;
@@ -250,41 +247,91 @@ grid-gap: 0px;
  /*
 login
 */
+.logo1 {
+    height: 100px;
+    width: 120px;
+    margin-right: 0;
+    object-fit: cover;
+}
 .inicio{
   display: flex;
   min-height: 100vh;
   margin: 0;
   justify-content: center;
   align-items: center;
+  background-color: #101014;
 }
 .inicioSesion{
   display: flex;
   flex-direction: column;
   margin: 20px;
-  background-color: #f162de;
+ background-color: #18181C;
   width: 400px;
   padding: 10px;
   text-align: center;
   align-items: center;
-  height: 400px;
-  border: 1px solid #f108d2;
+  height: 500px;
+  border: 1px solid #f3f2f3;
   border-radius: 20px;
-
+  color: white;
+  justify-content: center;
 }
 .inicioSesion input{
+  color: white;
   font: bold;
-  width: 200px;
+  width: 300px;
   margin: 20px;
-  border-radius: 15px;
-  padding: 5px;
+  border-radius: 10px;
+  padding: 7px;
+  outline: rgb(172, 137, 137);
+  border: 1px solid white;
+  background-color: #25252c;
+  display: flex;
+  text-align: center  ;
 }
-.inicioSesion button{
-  padding: 20px;
-  background-color: #dfd1dd;
-border-radius: 15px;}
-.inicioSesion label.usuario{
-margin-top: 40px;
+.inicioSesion button:hover{
+  box-shadow: 0px 0px 10px white;
+}
+.inicioSesion input:hover{
+  box-shadow: 0px 0px 10px white;
+}
 
+
+.inicioSesion button{
+  color: white;
+  padding: 10px;
+  background-color: #272936;
+border-radius: 15px;
+border: 1px solid white;
+width: 200px;
+height: 20px;
+display: flex;
+text-align: center;
+align-items: center;}
+.inicioSesion h2{
+margin-top: 40px;}
+.inicioSesion button:hover{
+  transform: translateY(-10px);
+  background-color:   #6a6d83;
+  color: #000;
+
+
+}
+.inicioSesion button{transition: transform 0.5s ease-in-out}
+
+#botoncito {
+  padding: 10px;
+  width: 300px;
+  background-color: #26BBFF ;
+  font: bold;
+  color: black;
+}
+#botoncito:hover{
+  background-color: #6ac2eb;
+  transform: translateY(-10px);
+}
+#botoncito{
+   transition: transform 0.3s ease-in-out
 }
 
 .inicioSesion1 {
@@ -292,8 +339,21 @@ margin-top: 40px;
     width: 300px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #f2f2f2;
+    
     border-radius: 10px;
+
+
+
+      
+
+ background-color: #18181C;
+  
+  padding: 10px;
+  
+  border: 1px solid #f3f2f3;
+  border-radius: 20px;
+  color: white;
+  
 }
 
 .inicioSesion1 label {
@@ -307,6 +367,21 @@ margin-top: 40px;
     width: 100%;
     padding: 8px;
     margin-top: 5px;
+
+
+
+
+    
+  color: white;
+  font: bold;
+ 
+  border-radius: 10px;
+ 
+  outline: rgb(172, 137, 137);
+  border: 1px solid white;
+  background-color: #25252c;
+ 
+
     
 }
 
@@ -323,8 +398,99 @@ margin-top: 40px;
 }
 
 .inicioSesion1 button:hover {
-    background-color: #4338CA;
+  
+    background-color: #4b3de0;
 }
+
+
+.logo2{    height: 100px;
+    width: 120px;
+    margin-left: 80;
+    object-fit: cover;
+}
+
+.inicioSesion{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+ background-color: #18181C;
+  width: 400px;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  height: 500px;
+  border: 1px solid #f3f2f3;
+  border-radius: 20px;
+  color: white;
+  justify-content: center;
+}
+.inicioSesion input{
+  color: white;
+  font: bold;
+  width: 300px;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 7px;
+  outline: rgb(172, 137, 137);
+  border: 1px solid white;
+  background-color: #25252c;
+  display: flex;
+  text-align: center  ;
+}
+.inicioSesion button:hover{
+  box-shadow: 0px 0px 10px white;
+}
+.inicioSesion input:hover{
+  box-shadow: 0px 0px 10px white;
+}
+
+
+.inicioSesion button{
+  color: white;
+  padding: 10px;
+  background-color: #272936;
+border-radius: 15px;
+border: 1px solid white;
+width: 200px;
+height: 20px;
+display: flex;
+text-align: center;
+align-items: center;}
+.inicioSesion h2{
+margin-top: 40px;}
+.inicioSesion button:hover{
+  transform: translateY(-10px);
+  background-color:   #6a6d83;
+  color: #000;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

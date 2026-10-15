@@ -27,17 +27,17 @@ if(isset($_SESSION["usuario_logged"])){
 
 <form action="./controllers/middleware.php" method="post" class="inicioSesion" >
 
-
-    <label for="usuario" class="usuario">Usuario</label>
-    <input type="text" name ="usuario">
-    <label for="contraseña">Contraseña</label>
-    <input type="text" name ="contraseña">
-    <input type="submit" value="Iniciar sesion">
+    <img src="./imgs/image.png" alt="" class="logo1">
+    <H2>Iniciar sesion en Anime-CB</H2>
+    <input type="text" name ="usuario" placeholder="Usuario">
+   
+    <input type="text" name ="contraseña" placeholder="Contraseña">
+    <input type="submit" value="Iniciar sesion" id="botoncito">
     
     <button type="submit" name="invitado">Iniciar sesión más tarde</button>
 </form>
 
 
 
-</body>
+</body> 
 </html>

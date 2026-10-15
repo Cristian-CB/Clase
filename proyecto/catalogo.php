@@ -29,7 +29,7 @@ require("./controllers/tarjeta.php");
     <label for="genero"> </label>
 
     <select name="genero" id="genero" onchange="this.form.submit()">
-        <option value="" <?= empty($_GET["genero"]) ? "selected" : "" ?>>
+        <option value="" <?= isset($_GET["genero"]) ? "selected" : "" ?>>
             Todos los géneros
         </option>
 

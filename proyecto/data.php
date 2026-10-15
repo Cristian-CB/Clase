@@ -9,7 +9,7 @@ $animes = [
         "destacado" => true,
         "genero" => "Acción y fantasía",
         "estudio" => "A-1 Pictures",
-        "episodios" => "25 capitulos",
+        "episodios" => "25 ep",
         "puntuacion" => 9,
         "estado" => "En emisión"
     ],
@@ -20,7 +20,7 @@ $animes = [
         "destacado" => true,
         "genero" => "Superhéroes y acción",
         "estudio" => "Bones",
-        "episodios" => "159 capitulos",
+        "episodios" => "159 ep",
         "puntuacion" => 8,
         "estado" => "Finalizado"
     ],
@@ -32,7 +32,7 @@ $animes = [
         "genero" => "Acción y drama",
         "estudio" => "MAPPA",
         "puntuacion" => 7.5,
-        "episodios" => "89 capitulos",
+        "episodios" => "89 ep",
         "estado" => "Finalizado"
     ],
     [
@@ -43,7 +43,7 @@ $animes = [
         "genero" => "Aventura y acción",
         "estudio" => "Toei Animation",
         "puntuacion" => 9,
-        "episodios" => "1100 capitulos",
+        "episodios" => "1100 ep",
         "estado" => "En emisión"
     ],
     [
@@ -54,7 +54,7 @@ $animes = [
         "genero" => "Acción y fantasía",
         "estudio" => "Ufotable",
         "puntuacion" => 8.6,
-        "episodios" => "69 capitulos",
+        "episodios" => "69 ep",
         "estado" => "En emisión"
     ],
     [
@@ -65,7 +65,7 @@ $animes = [
         "genero" => "Suspense y psicológico",
         "estudio" => "Madhouse",
         "puntuacion" => 9,
-        "episodios" => "37 capitulos",
+        "episodios" => "37 ep",
         "estado" => "Finalizado"
     ]
 ];

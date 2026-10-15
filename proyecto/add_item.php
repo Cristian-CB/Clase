@@ -36,12 +36,13 @@ else{
 
 
 <form action="" method="post"  class = "inicioSesion1">
-
+ <img src="./imgs/image.png" alt="" class="logo2">
+    <H2>Añadir animes</H2>
     <label for="nombre">Nombre:</label>
     <input type="text" name="nombre" id="nombre" required>
 
     <label for="imagen">Imagen:</label>
-    <input type="text" name="imagen" id="imagen" required>
+    <input type="file" name="imagen" id="imagen" required>
 
     <label for="destacado">¿Destacado?</label>
     <select name="destacado" id="destacado">    
@@ -76,7 +77,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
 
 $anime = [
     "nombre" => $_POST["nombre"],
-    "imagen" => RUTA_IMAGENES . "frieren.jpg",
+    "imagen" => RUTA_IMAGENES . $_POST["imagen"],
     "destacado" => $_POST["destacado"],
     "genero" => $_POST["genero"],
     "estudio" => $_POST["estudio"],
@@ -87,6 +88,7 @@ $anime = [
 
 ?>
 <section class = "hola">
+    <h2>Animes añadidos</h2>
 <?php
 
 mostrar([$anime]);
