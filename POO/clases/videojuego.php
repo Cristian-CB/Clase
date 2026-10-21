@@ -31,6 +31,7 @@ class videojuego
     private string $puntuacion;
     private string $imagen;
     private int $stock;
+    private float $precioOriginal;
 
     /**
      * Get the value of id
@@ -113,6 +114,15 @@ class videojuego
     {
         return $this->precio;
     }
+    /**
+     * Get the value of precio
+     *
+     * @return float
+     */
+    public function getPrecioOriginal(): float
+    {
+        return $this->precioOriginal;
+    }
 
     /**
      * Set the value of precio
@@ -187,7 +197,9 @@ class videojuego
         $precio,
         $puntuacion,
         $imagen,
-        $stock
+        $stock,
+        $precioOriginal
+
     ) {
         $this->id = $id;
         $this->titulo = $titulo;
@@ -196,6 +208,7 @@ class videojuego
         $this->puntuacion = $puntuacion;
         $this->imagen = $imagen;
         $this->stock = $stock;
+        $this->precioOriginal = $precioOriginal;
     }
 
     public function tieneStock()
@@ -249,11 +262,14 @@ class videojuego
     /**
      * Get the value of stock
      *
-     * @return int
+     * @return String
      */
-    public function getStock(): int
+    public function getStock(): String
     {
-        return $this->stock;
+        if($this->stock >= 0 ){
+        return "✅";}
+        else{
+        return "❌";}
     }
 
     /**
@@ -274,14 +290,35 @@ class videojuego
     {
         if ($this->getStock() > 0) {
             ?>
+
+            <div class = "itemVideojuego">
             <div class = "item">
                 <img src="<?= $this->getImagen() ?> " alt="imagen">
+                    <p class ="genero"> <?= $this->getGenero()  ?> </p>
+                    <p class = "stock"> Stock <?= $this->getStock()  ?> </p>
+                    <p class="puntuacion">⭐ <?= $this->getPuntuacion() ?></p>
+
                 <div class ="content">
-                    <p> <?= $this->getTitulo()  ?> </p>
-                    <p> <?= $this->getGenero()  ?> </p>
-                    <p> <?= $this->getStock()  ?> </p>
+                    <p class = "titulo"> <?= $this->getTitulo()  ?> </p>
+                    <?php
+                    if($this->getPrecio() != $this->getPrecioOriginal()){
+                        ?>
+                        <p class = "precio"  > <?= $this->getPrecio()  ?>$ </p> 
+                        <p class="precioOriginal"> <s><?= $this->getPrecioOriginal() ?>$</s> </p> <?php } 
+                        else{ 
+
+                        ?>
+                        <p class = "precio"  > <?= $this->getPrecio()  ?>$ </p>
+                        <?php
+                        }
+                        ?>
+
+                    
+                    
                 </div>
             </div>
+        </div>
+        
             <?php
 
         } else {
