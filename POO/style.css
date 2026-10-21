@@ -1,0 +1,31 @@
+body{background-color: #4618AC;}
+.pintar{color:white;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    
+    background-color: red;
+    margin: 20px;
+}
+
+
+.item{  display: flex;
+    flex-direction: row;
+    
+    border:1px solid black;
+    width: 270px;
+    height: 220;
+}
+img {width: 100px;
+height: 110px;
+object-fit: cover;}
+.content{display: flex;
+flex-direction: column !important;
+}
+.content p{margin: 5px;}
+
+.pintar:nth-child(2){
+    background-color: #4618AC;
+}
+h2{margin: 20px;
+color: wh;}
