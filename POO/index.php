@@ -67,8 +67,9 @@ foreach($juegos as $juego){
 foreach($juegos as $juego){
 
     if($juego->filter("oferta")){
+        $boleano = true;
         $juego-> aplicarDescuento(20);
-        $juego->pintarTarjeta();
+        $juego->pintarTarjeta($boleano);
 
     }
     

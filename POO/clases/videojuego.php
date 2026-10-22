@@ -286,7 +286,7 @@ class videojuego
         return $this;
     }
 
-    public function pintarTarjeta()
+    public function pintarTarjeta($boleano = false)
     {
         if ($this->getStock() > 0) {
             ?>
@@ -301,13 +301,14 @@ class videojuego
                 <div class ="content">
                     <p class = "titulo"> <?= $this->getTitulo()  ?> </p>
                     <?php
-                    if($this->getPrecio() != $this->getPrecioOriginal()){
+                    if($boleano){
                         ?>
-                        <p class = "precio"  > <?= $this->getPrecio()  ?>$ </p> 
-                        <p class="precioOriginal"> <s><?= $this->getPrecioOriginal() ?>$</s> </p> <?php } 
+                        <p class="precioOriginal"> <s><?= $this->getPrecioOriginal() ?>$</s> </p>   
+                        <p class = "precio"  > <?= $this->getPrecio()  ?>$ </p> <?php }
                         else{ 
 
                         ?>
+                        <p></p>
                         <p class = "precio"  > <?= $this->getPrecio()  ?>$ </p>
                         <?php
                         }

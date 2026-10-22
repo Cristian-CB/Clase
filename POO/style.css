@@ -18,6 +18,13 @@ grid-gap: 20px;
 height: 200px;
 object-fit: cover;
 border-radius: 20px;
+
+}
+
+.itemVideojuego:hover{
+    transform: translateY(-15px);
+    transform: 0.4s ease;
+    transform: scale(1.5);
 }
 .item .genero{position: absolute;
 background-color:red;
@@ -62,7 +69,7 @@ text-transform: capitalize;
 .content {
     
     display: grid;
-grid-template-columns: 1fr 1fr;}
+grid-template-columns: 1fr 1fr 1fr;}
 .content p {margin: 0 auto;}
 h2 {
     margin-left: 7%;
@@ -84,6 +91,14 @@ h2::after {
     border-radius: 5px; 
 }
 
-.item .precio1{
+.item .precioOriginal{
     text-decoration: line-through;
+    color: red  ;
+    opacity: 0.9;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+
+
 }
+
